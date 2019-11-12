@@ -16,3 +16,6 @@ try:
                             help='Kind of proxy used. Possible values: "none" or "scraperapi"')
 
         args = parser.parse_args()
+
+except Exception as e:
+        logger.critical(f'Critical error during scraping: {str(e)}')
